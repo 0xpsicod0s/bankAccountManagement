@@ -1,5 +1,3 @@
-// Classe Client: Representa um cliente do banco com nome e uma lista de contas.
-
 class Client {
     constructor(name) {
         this.name = name;

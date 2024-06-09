@@ -1,4 +1,3 @@
-// Classe Bank: Gerencia a criação e remoção de contas e clientes, além de listar essas entidades.
 class Bank {
     constructor(accountClientName, accountNumber) {
         this.accountClientName = accountClientName;

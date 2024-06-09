@@ -1,4 +1,3 @@
-// Classe BankAccount: Representa uma conta bancária com saldo e métodos para depósito, saque e transferência.
 class BankAccount {
     constructor(accountNumber, amount) {
         this.balance = 0;
