@@ -14,6 +14,7 @@ class Client {
             clientsArr.push(this.name);
             localStorage.setItem('clients', JSON.stringify(clientsArr));
         }
+        window.location.reload();
     }
 }
 

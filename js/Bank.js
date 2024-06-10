@@ -15,8 +15,9 @@ class Bank {
             return;
         }
         
-        this.registeredAccountArr.push({ accountClientName: this.accountClientName, accountNumber: [this.accountNumber] });
+        this.registeredAccountArr.push({ accountClientName: this.accountClientName, accountNumber: [this.accountNumber], balance: 0 });
         this.saveLocalStorage(this.registeredAccountArr);
+        window.location.reload();
     }
 
     existingAccount(registeredCustomerName) {
@@ -30,6 +31,26 @@ class Bank {
         const index = this.existingAccount(modifiedAccount.accountClientName);
         this.registeredAccountArr[index] = account;
         this.saveLocalStorage(this.registeredAccountArr);
+    }
+
+    listRegisteredAccounts(input) {
+        if (!this.registeredAccountArr.length) return;
+        this.registeredAccountArr.forEach(client => {
+            input.innerHTML += `
+                <li>Nome: ${client.accountClientName}</li>
+                <li>Numeros de conta: ${client.accountNumber}</li>
+                <li>Saldo: ${client.balance}</li>
+                <hr>
+            `
+        });
+    }
+
+    listClients(input) {
+        this.clientsArr.forEach((client, index) => {
+            input.innerHTML += `
+                <li>Cliente N°${index}: ${client}</li>
+            `
+        });
     }
 
     saveLocalStorage(registeredAccount) {

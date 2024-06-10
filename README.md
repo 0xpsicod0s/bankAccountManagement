@@ -8,6 +8,8 @@ Fiz este pequeno projeto para praticar meus estudos em Orientação a Objetos, e
 ## Screenshots
 
 ![App Screenshot](https://i.imgur.com/SVkqqYt.png)
+#### Listagem:
+![App Screenshot](https://i.imgur.com/hGDFsTq.png)
 
 
 ## Funcionalidades
@@ -19,5 +21,5 @@ Fiz este pequeno projeto para praticar meus estudos em Orientação a Objetos, e
     - Depósito de dinheiro
     - Transferência bancária
     - Saque
-- Listagem de clientes e contas bancárias (a ser adicionado)
+- Listagem de clientes e contas bancárias
 

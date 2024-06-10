@@ -13,6 +13,7 @@ class BankAccount {
             this.registeredAccountArr[accountFound].balance += this.balance;
             this.saveLocalStorage(this.registeredAccountArr);
         }
+        window.location.reload();
     }
 
     withdraw() {
@@ -22,6 +23,7 @@ class BankAccount {
             this.registeredAccountArr[accountFound].balance -= this.amount;
             this.saveLocalStorage(this.registeredAccountArr);
         }
+        window.location.reload();
     }
 
     transfer(targetAccount) {
@@ -41,6 +43,7 @@ class BankAccount {
             this.registeredAccountArr[currentAccountIndex].balance -= this.amount;
             this.saveLocalStorage(this.registeredAccountArr);
         }
+        window.location.reload();
     }
 
     checkBalance() {
