@@ -40,6 +40,14 @@ function performOperation() {
     }
 }
 
+function listClients() {
+    const clients = document.querySelector('#client-list');
+    const accountList = document.querySelector('#account-list');
+    const bank = new Bank();
+    bank.listClients(clients);
+    bank.listRegisteredAccounts(accountList);
+}
+
 addClient.onclick = createClient;
 addAccount.onclick = createAccount;
 executeOperation.onclick = performOperation;
