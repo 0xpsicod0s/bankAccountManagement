@@ -1,11 +1,6 @@
 class Client {
     constructor(name) {
         this.name = name;
-        this.listOfAccounts = [];
-    }
-
-    addCustomerAccount(accountNumber) {
-        this.listOfAccounts.push(accountNumber);
     }
 
     saveCustomer() {
