@@ -40,29 +40,6 @@ function performOperation() {
     }
 }
 
-function listRegisteredAccounts() {
-    const clientsRegistered = JSON.parse(localStorage.getItem('registeredAccounts'));
-    const accountList = document.querySelector('#account-list');
-    if (!clientsRegistered) return;
-    clientsRegistered.forEach(client => {
-        if (!client.balance) client.balance = 0;
-        accountList.innerHTML += `
-            <li>Nome: ${client.accountClientName}</li>
-            <li>Numeros de conta: ${client.accountNumber}</li>
-            <li>Saldo: ${client.balance}</li>
-            <hr>
-        `
-    });
-}
-
-function listClients() {
-    const clients = document.querySelector('#client-list');
-    const accountList = document.querySelector('#account-list');
-    const bank = new Bank();
-    bank.listClients(clients);
-    bank.listRegisteredAccounts(accountList);
-}
-
 addClient.onclick = createClient;
 addAccount.onclick = createAccount;
 executeOperation.onclick = performOperation;
